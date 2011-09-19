@@ -10,10 +10,10 @@ I would suggest to add a `noscript` block so that in case the user doesn't have 
 
 <pre>
   <code>
-		&lt;img class="lazy" src="/img/blank.gif" data-href="/img/image1.jpg" &gt;
-		&lt;noscript&gt;
-			&lt;img src="/img/image1.jpg" &gt;
-		&lt;noscript&gt;
+		<img class="lazy" src="/img/blank.gif" data-href="/img/image1.jpg">
+		<noscript>
+			<img src="/img/image1.jpg">
+		<noscript>
 	</code>
 </pre>
 
@@ -21,13 +21,13 @@ In a basic scenario, you just need to import `jquery`, `jaal.js` and call the fu
 
 <pre>
 	<code>
-		&lt;script src="/js/jquery.js"&gt;&lt;/script&gt;
-		&lt;script src="/js/jail.js"&gt;&lt;/script&gt;
-		&lt;script&gt;
+		<script src="/js/jquery.js"&gt;&lt;/script>
+		<script src="/js/jail.js"&gt;&lt;/script>
+		<script>
 			 $(function(){
 			 	$('img.lazy').jaal();
 		     });
-		&lt;/script&gt;
+		</script>
 	</code>
 </pre>
 
