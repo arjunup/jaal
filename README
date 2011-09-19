@@ -1,0 +1,35 @@
+# jQuery Asynchronous Anchor image Loader (Jaal)
+
+Jaal helps loading background images asynchronously and this helps in loading these background images quickly therby improving
+the user perceived performance.
+
+Selected background images will be downloaded if they are visible and when they are visible inside the viewport (rectangular viewing region). Images can be loaded after an event is triggered (such as `click`, `mouseover`, and `scroll`) or after a specified delay.  It's advisable to call jail() after the DOM has been constructed (document ready).
+
+First of all, this plugin requires you to make some HTML changes. The `data-style` attribute (HTML5 data attribute) should contain the css for the background image. 
+I would suggest to add a `noscript` block so that in case the user doesn't have Javascript enabled, the background images will be displayed (progressive enhancement).
+
+<pre>
+  <code>
+		&lt;img class="lazy" src="/img/blank.gif" data-href="/img/image1.jpg" &gt;
+		&lt;noscript&gt;
+			&lt;img src="/img/image1.jpg" &gt;
+		&lt;noscript&gt;
+	</code>
+</pre>
+
+In a basic scenario, you just need to import `jquery`, `jaal.js` and call the function on the background images you want to lazy load.
+
+<pre>
+	<code>
+		&lt;script src="/js/jquery.js"&gt;&lt;/script&gt;
+		&lt;script src="/js/jail.js"&gt;&lt;/script&gt;
+		&lt;script&gt;
+			 $(function(){
+			 	$('img.lazy').jaal();
+		     });
+		&lt;/script&gt;
+	</code>
+</pre>
+
+You will verify how only the visible images are loaded after the DOM is ready.
+
