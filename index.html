@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Jaal by arjunup</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+
+      <header>
+        <h1>Jaal</h1>
+        <p>jQuery Asynchronous Anchor image Loading</p>
+      </header>
+
+      <div id="banner">
+        <span id="logo"></span>
+
+        <a href="https://github.com/arjunup/jaal" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/arjunup/jaal/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/arjunup/jaal/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
+
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <h1>jQuery Asynchronous Anchor image Loader (Jaal)</h1>
+
+<p>Jaal helps loading background images asynchronously and this helps in loading these background images quickly there by improving the user perceived performance.</p>
+
+<p>Selected background images will be downloaded if they are visible and when they are visible inside the viewport (rectangular viewing region). Images can be loaded after an event is triggered (such as <code>click</code>, <code>mouseover</code>, and <code>scroll</code>) or after a specified delay.  It's advisable to call jail() after the DOM has been constructed (document ready).</p>
+
+<p>First of all, this plugin requires you to make some HTML changes. The <code>data-style</code> attribute (HTML5 data attribute) should contain the css for the background image. 
+I would suggest to add a <code>noscript</code> block so that in case the user doesn't have Javascript enabled, the background images will be displayed (progressive enhancement).</p>
+
+<pre><code>&lt;a href="#" class="bgAnchor" data-style="
+ background:url('./img/sunflower.jpg') no-repeat;background-position:0px 0px;"&gt;
+    &lt;image src="./img/spacer.gif" alt = "Image 1" title = "Image 1" width="600" height="400"/&gt;
+&lt;/a&gt;
+&lt;noscript&gt;
+  &lt;a href="#" class="bgAnchor" style="
+background:url('./img/sunflower.jpg') no-repeat;background-position:0px 0px;"&gt;
+    &lt;image src="./img/spacer.gif" alt = "Image 1" title = "Image 1" width="600" height="400"/&gt;
+  &lt;/a&gt;
+&lt;noscript&gt;
+</code></pre>
+
+<p>In a basic scenario, you just need to import <code>jquery</code>, <code>jaal.js</code> and call the function on the background images you want to lazy load.</p>
+
+<pre><code>&lt;script src="/js/jquery.js"&gt;&lt;/script&gt;
+&lt;script src="/js/jail.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+       $(function(){
+       $("a.bgAnchor").jaal();  
+       });
+&lt;/script&gt;
+</code></pre>
+
+<p>You will verify how only the visible images are loaded after the DOM is ready.</p>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/arjunup">arjunup</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
